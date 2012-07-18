@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="golfstoppdbModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="golfstoppdbModelStoreContainer">
+          <EntitySet Name="clubs" EntityType="golfstoppdbModel.Store.clubs" store:Type="Tables" Schema="golfstoppdb" />
+          <EntitySet Name="courses" EntityType="golfstoppdbModel.Store.courses" store:Type="Tables" Schema="golfstoppdb" />
+        </EntityContainer>
+        <EntityType Name="clubs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="char" Nullable="false" MaxLength="38" />
+          <Property Name="name" Type="varchar" MaxLength="45" />
+          <Property Name="golfseId" Type="char" MaxLength="38" />
+          <Property Name="mapLat" Type="double" />
+          <Property Name="mapLng" Type="double" />
+          <Property Name="homepage" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="courses">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="char" Nullable="false" MaxLength="38" />
+          <Property Name="clubId" Type="char" Nullable="false" MaxLength="38" />
+          <Property Name="name" Type="varchar" MaxLength="45" />
+          <Property Name="par" Type="int" />
+          <Property Name="numberOfHoles" Type="int" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="golfstoppdbModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="golfstoppdbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="clubs" EntityType="golfstoppdbModel.clubs" />
+          <EntitySet Name="courses" EntityType="golfstoppdbModel.courses" />
+        </EntityContainer>
+        <EntityType Name="clubs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" Nullable="false" />
+          <Property Name="name" Type="String" />
+          <Property Name="golfseId" Type="String" />
+          <Property Name="mapLat" Type="Double" />
+          <Property Name="mapLng" Type="Double" />
+          <Property Type="String" Name="homepage" />
+        </EntityType>
+        <EntityType Name="courses">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" Nullable="false" />
+          <Property Name="clubId" Type="String" Nullable="false" />
+          <Property Name="name" Type="String" />
+          <Property Name="par" Type="Int32" />
+          <Property Name="numberOfHoles" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="golfstoppdbModelStoreContainer" CdmEntityContainer="golfstoppdbEntities">
+          <EntitySetMapping Name="clubs"><EntityTypeMapping TypeName="golfstoppdbModel.clubs"><MappingFragment StoreEntitySet="clubs">
+            <ScalarProperty Name="homepage" ColumnName="homepage" />
+                <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="golfseId" ColumnName="golfseId" />
+            <ScalarProperty Name="mapLat" ColumnName="mapLat" />
+            <ScalarProperty Name="mapLng" ColumnName="mapLng" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="courses"><EntityTypeMapping TypeName="golfstoppdbModel.courses"><MappingFragment StoreEntitySet="courses">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="clubId" ColumnName="clubId" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="par" ColumnName="par" />
+            <ScalarProperty Name="numberOfHoles" ColumnName="numberOfHoles" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="DatabaseModel">
+        <EntityTypeShape EntityType="golfstoppdbModel.clubs" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9802864583333331" IsExpanded="true" />
+        <EntityTypeShape EntityType="golfstoppdbModel.courses" Width="1.5" PointX="2.75" PointY="0.75" Height="1.9802864583333335" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

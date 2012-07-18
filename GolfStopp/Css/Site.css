@@ -1,0 +1,318 @@
+﻿html 
+{ 
+    height: 100% 
+}
+
+body
+{
+    margin: 0px;
+    padding: 0px;   
+}
+
+#body1
+{ 
+    height: 321px; 
+    width: 100%;
+    background-color: #5bad0a;
+    background-image: url('../Images/middleHeaderBg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: 1px solid black;
+    border-bottom: 1px solid #dddddd;
+}
+
+#body1Content
+{ 
+    width: 400px;
+    height: 86px;
+    border: 0px solid red;
+    padding-top: 70px;
+}
+
+#body1Content span
+{
+    font: bold 36px sans-serif;
+    color: #006600;    
+}
+
+#body1Content input[type="text"]
+{    
+    margin-top: 5px;
+    border-radius: 4px;
+    height: 35px;
+    width: 300px;   
+    border: 1px solid #000000;
+    background-color: #fcfcfc;
+    padding-left: 10px;
+    font: normal 25px Segoe UI;
+    color: #999999;
+}
+
+header
+{
+    width: 100%;
+    height: 75px;
+    background-image: url('../Images/topHeaderBg.png');
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #dddddd;
+}
+
+#logo
+{    
+    margin-top: 7px;
+}
+
+#body
+{
+    padding: 25px;   
+}
+
+.club_td
+{   
+    background-color: #fafafa;    
+    color: #646464;
+    border: 1px solid #646464;
+    border-radius: 4px;
+    font: normal 16px Segoe UI;
+    padding: 2px;
+    padding-left: 5px;
+    width: 304px; 
+    margin-top: 5px;  
+}
+
+.club_td:hover
+{
+    
+    background-color: #99FF33;
+    color: #008000;
+    border: 1px solid #008000;
+    cursor: pointer;
+    border-radius: 4px;
+    font: normal 16px Segoe UI;
+    padding: 2px;
+    padding-left: 5px;
+    width: 304px; 
+    margin-top: 5px;  
+}
+
+
+
+#ranking
+{
+    width: 100%;
+    height: 500px;  
+    background-color: Green;
+    border-top: 1px solid #000000;
+}
+
+/* --------- Club details ------------------ */
+
+#clubDetails_Container
+{
+    width: 100%;
+    height: 450px;  
+    background-color: #eeeeee;    
+    display: none;
+    border-top: 1px solid #646464;
+}
+
+#clubDetails_Spinner
+{
+    margin: 0 auto;
+    position: relative;
+    display: none;
+    margin-top: 100px;   
+    width: 400px;
+    text-align: center;
+}
+
+#clubDetails_Spinner img
+{
+    display: block;
+    margin: 0 auto;   
+    position: relative;
+}
+
+#clubDetails_Spinner span
+{
+    Font: normal 22px Segoe UI;
+    color: #449109;
+}
+
+#clubDetails_Content
+{
+    display: none;  
+    border: 0px solid red;
+    height: 450px;
+}
+
+#clubDetails_Header
+{
+    height: 50px;
+    border-bottom: 1px solid #aaaaaa;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+#clubDetails_Header div
+{
+    float: left;
+    padding-top: 4px;
+    padding-left: 10px;
+} 
+
+#clubDetails_Header span
+{    
+    font-family: Calibri;
+    font-size: 35px;      
+    color: #646464;
+}
+
+#clubDetails_Header div:nth-child(2)
+{
+    background-image: url('../Images/medal_green_48x48.png');
+    background-repeat: no-repeat;
+    width: 36px;
+    height: 40px;
+    margin-left: 15px;
+    font: bold 16px Segoe UI;
+    padding-left: 12px;
+    padding-top: 8px;
+    color: #646464;
+}
+
+#clubDetails_Body
+{    
+    padding: 10px;
+    border-top: 1px solid #ffffff;
+    height: 350px;
+}
+
+#clubDetails_Info
+{
+    float: left;   
+    width: 285px;
+    padding-left: 15px;
+}
+
+#clubDetails_Info .infoHeader
+{
+    font-weight: bold;
+    font-family: Calibri;
+    font-size: 18px;
+    color: #646464;
+    margin: 0px;    
+}
+
+#clubDetails_Info .infoHeader:not(:nth-child(1))
+{    
+    margin-top: 20px;    
+}
+
+#clubDetails_Info div
+{
+    font-family: Calibri;
+    font-size: 18px;    
+}
+
+#clubDetails_Info span
+{
+    font-family: Calibri;
+    font-size: 14px;    
+}
+
+#clubDetails_Info div a
+{
+    color: Blue;
+}
+
+#clubDetails_Info ul
+{
+    margin: 0px;
+    padding-left: 25px;
+}
+
+#clubDetails_Info li
+{
+    font-family: Calibri;
+    font-size: 14px;
+}
+
+.clubDetails_Tab
+{
+    width: 430px;
+    height: 270px;
+    float: left;
+    background-color: White;
+}
+
+#clubDetails_Tabs
+{
+    width: 450px;
+    height: 340px;
+    float: left;    
+}
+
+.clubDetails_CoursesInfo table
+{
+    
+}
+
+.clubDetails_CoursesInfo table thead tr th:nth-child(1)
+{
+    text-align: left;
+}
+
+.clubDetails_CoursesInfo table thead tr th
+{
+    border-bottom: 1px solid #000000;  
+    padding-left: 5px; 
+    padding-right: 5px;
+    font: normal 18px Calibri;
+    color: #444444;
+}
+
+.clubDetails_CoursesInfo table tbody tr td
+{
+    font: normal 15px Calibri;
+    color: #646464;
+}
+
+.clubDetails_CoursesInfo table tbody td:not(:nth-child(1))
+{
+    text-align: center;
+}
+
+.clubDetails_CoursesInfo table tbody tr td:nth-child(1)
+{
+    padding-right: 15px;
+    padding-left: 5px;
+    color: #3399FF;
+}
+
+.clubDetails_CoursesInfo table tbody tr td:nth-child(4)
+{
+    background-image: url('../Images/star_16x16.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-left: 40px;
+}
+
+.clubDetails_CoursesInfo table tbody tr td:nth-child(5)
+{
+    background-image: url('../Images/exclamation_16x16.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-left: 40px;
+}
+
+/* --------- Course details ------------------ */
+
+#courseDetails_Container
+{
+    width: 100%;
+    height: 500px;  
+    background-color: #eeeeee;    
+    display: none;
+    border-top: 1px solid #646464;
+}

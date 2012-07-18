@@ -1,0 +1,127 @@
+﻿
+<script src="../../Scripts/jquery/ui/jquery.ui.core.min.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery/ui/jquery.ui.widget.min.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery/ui/jquery.ui.position.min.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery/ui/jquery.ui.tabs.min.js" type="text/javascript"></script>
+<script src="../../Scripts/app/golfStopp.js" type="text/javascript"></script>
+<link href="../../Css/jqueryUI/jquery-ui-1.8.21.custom.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCkApSU5IHAUJ4nZwH4TKRYDjQSfsbwlcM&sensor=false"></script>
+
+@*Header*@
+<header>
+    <div class="container">
+        <div class="row">            
+            <div class="span6">
+                <img id="logo" src="../../Images/logo.png" />        
+            </div>
+        </div>
+    </div>
+</header>
+
+@*Green logo body*@
+<div id="body1">
+    
+    <div class="container">
+        <div class="row">
+
+            <div class="span5 offset5">
+                <div id="body1Content">
+                    <span>Sök golfklubb</span>
+                    <input id="searchInput" type="text" onkeyup="searchChanged()" />
+                </div>
+                <table id="clubSearchResultTable" cellspacing="1"><tbody id="clubTableBody"></tbody></table>
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+@*Club details*@
+<div id="clubDetails_Container">
+
+    <div class="container">
+        <div class="row">
+            <div class="span10">                    
+
+                    <div id="clubDetails_Content">
+                        
+                        <div id="clubDetails_Header">
+                            <div>
+                                <span data-bind="text: clubName"></span>
+                            </div>
+                            <div>
+                                2.9
+                            </div>                            
+                        </div>                       
+                        
+                        <div id="clubDetails_Body">
+
+                            <div id="clubDetails_Info">
+
+                                <p class="infoHeader">Hemsida</p>
+                                <div id="clubDetilsHomepage"></div>
+
+                                <p class="infoHeader">Repotage</p>
+                                <span>Det finns inga repotage skrivna för denna klubb</span>
+
+                                <p class="infoHeader">Banor</p>
+                                <ul id="clubDetails_CourseList">
+                                    
+                                </ul>
+
+                            </div>
+                            <div id="clubDetails_Tabs">
+                                <ul>
+		                            <li><a href="#tabs-1">Karta</a></li>
+		                            <li><a href="#tabs-2">Banor</a></li>
+		                            <li><a href="#tabs-3">Recensioner</a></li>
+	                            </ul>
+
+                                @*Map*@
+                                <div id="tabs-1"><div class="clubDetails_Tab" id="clubDetails_MapCanvas"></div></div>
+
+                                @*Courses*@
+                                <div id="tabs-2">
+                                    <div class="clubDetails_Tab clubDetails_CoursesInfo">
+                                        <table id="clubDetails_CoursesInfo" cellpadding="0" cellspacing="0">
+                                        <thead><tr><th>Bana</th><th>Hål</th><th>Par</th><th></th><th></th></tr></thead>
+                                        <tbody>
+                                        
+                                        </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div id="tabs-3"><div class="clubDetails_Tab">Hej3</div></div>
+                            </div>   
+                            
+                                                     
+                        </div>
+                        
+                    </div>
+            </div>
+        </div>    
+    </div>
+</div>
+
+<div id="courseDetails_Container">
+
+
+
+</div>
+
+<div id="ranking">
+
+
+</div>
+
+@*Spinner*@
+<div id="clubDetails_Spinner">
+    <img src="../../Images/spinner1.gif" /><br />
+    <span>Hämtar klubbinformation, vänlig vänta...</span>
+</div>
+
+
+
+
